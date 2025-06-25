@@ -1,5 +1,3 @@
-//
-
 
 import SwiftUI
 
@@ -38,9 +36,10 @@ struct HomeView: View {
         case "Gallery Images":
             GalleryView()
         case "Devices Info":
-            DevicesInfoView()
+            CombineFrameView()
         default:
             Text("Unknown View")
+            
         }
         
     }
