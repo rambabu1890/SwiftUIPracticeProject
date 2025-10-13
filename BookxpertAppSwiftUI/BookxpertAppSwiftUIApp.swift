@@ -13,7 +13,7 @@ struct BookxpertAppSwiftUIApp: App {
 
     var body: some Scene {
         WindowGroup {
-            HomeView()
+            NYCSchoolListView()
                 .environment(\.managedObjectContext, persistenceController.container.viewContext)
         }
     }

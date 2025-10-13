@@ -4,12 +4,24 @@ import SwiftUI
 
 struct DisplayPDFView: View {
     
-    @ObservedObject var viewmodel = GalleryViewModelClass()
-    @State private var counter: Int = 0
+    @State var isOpenSheet:Bool = false
+  
     var body: some View {
-        Text("Text Count is \(counter)")
-        Button("Increment") {
-            counter += 1
+        ZStack{
+            Color.green
+                .edgesIgnoringSafeArea(.all)
+                Button {
+                    isOpenSheet.toggle()
+                } label: {
+                    Text("Button")
+                        .fontWeight(.bold)
+                        .foregroundStyle(.white)
+                }
+
+                .sheet(isPresented: $isOpenSheet) {
+                    Text("Hello Rams")
+                        
+                }
         }
     }
 }
